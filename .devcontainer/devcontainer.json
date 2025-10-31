@@ -1,0 +1,19 @@
+{
+  "name": "Anaconda + R + JupyterLab",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [8888],
+  "postCreateCommand": "echo 'Container ready! Python, R, JupyterLab installed.'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "REditorSupport.r"
+      ]
+    }
+  },
+  "workspaceFolder": "/workspace"
+}
